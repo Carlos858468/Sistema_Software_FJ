@@ -1,0 +1,60 @@
+2026-11-20 21:38:42,907 - INFO - OPERACION_V2|Registrar cliente|EXITOSA
+2026-11-20 21:38:48,843 - INFO - CONSULTA_V2|Consultar clientes
+2026-11-20 21:39:36,892 - INFO - OPERACION_V2|Crear servicio|EXITOSA
+2026-11-20 21:40:09,362 - WARNING - OPERACION_V2|Crear servicio|NO_COMPLETADA
+2026-11-20 21:40:25,956 - INFO - CONSULTA_V2|Consultar servicios
+2026-11-20 21:41:00,679 - INFO - OPERACION_V2|Crear reserva|EXITOSA
+2026-11-20 21:41:17,189 - WARNING - OPERACION_V2|Confirmar reserva|NO_COMPLETADA
+2026-11-20 21:41:27,927 - ERROR - OPERACION_V2|Procesar reserva|ERROR_CONTROLADO|La reserva debe estar confirmada antes de procesarse.
+Traceback (most recent call last):
+  File "c:\Users\sneider\Documents\Sistema_Software_FJ\main.py", line 33, in ejecutar_operacion
+    resultado = funcion()
+  File "c:\Users\sneider\Documents\Sistema_Software_FJ\main.py", line 262, in procesar_reserva
+    resultado = reserva.procesar()
+  File "c:\Users\sneider\Documents\Sistema_Software_FJ\reservas.py", line 35, in procesar
+    raise ReservaError("La reserva debe estar confirmada antes de procesarse.")
+excepciones.ReservaError: La reserva debe estar confirmada antes de procesarse.
+2026-11-20 21:41:49,595 - INFO - OPERACION_V2|Confirmar reserva|EXITOSA
+2026-11-20 21:42:05,503 - INFO - OPERACION_V2|Procesar reserva|EXITOSA
+2026-11-20 21:42:58,865 - ERROR - OPERACION_V2|Cancelar reserva|ERROR_CONTROLADO|No se puede cancelar esta reserva.
+Traceback (most recent call last):
+  File "c:\Users\sneider\Documents\Sistema_Software_FJ\main.py", line 33, in ejecutar_operacion
+    resultado = funcion()
+  File "c:\Users\sneider\Documents\Sistema_Software_FJ\main.py", line 273, in cancelar_reserva
+    return reserva.cancelar()
+           ~~~~~~~~~~~~~~~~^^
+  File "c:\Users\sneider\Documents\Sistema_Software_FJ\reservas.py", line 29, in cancelar
+    raise ReservaError("No se puede cancelar esta reserva.")
+excepciones.ReservaError: No se puede cancelar esta reserva.
+2026-11-20 21:43:18,902 - ERROR - OPERACION_V2|Cancelar reserva|ERROR_CONTROLADO|No se puede cancelar esta reserva.
+Traceback (most recent call last):
+  File "c:\Users\sneider\Documents\Sistema_Software_FJ\main.py", line 33, in ejecutar_operacion
+    resultado = funcion()
+  File "c:\Users\sneider\Documents\Sistema_Software_FJ\main.py", line 273, in cancelar_reserva
+    return reserva.cancelar()
+           ~~~~~~~~~~~~~~~~^^
+  File "c:\Users\sneider\Documents\Sistema_Software_FJ\reservas.py", line 29, in cancelar
+    raise ReservaError("No se puede cancelar esta reserva.")
+excepciones.ReservaError: No se puede cancelar esta reserva.
+2026-11-20 21:43:31,109 - INFO - CONSULTA_V2|Consultar reservas
+2026-11-20 21:43:48,182 - ERROR - OPERACION_V2|Cancelar reserva|ERROR_CONTROLADO|No se puede cancelar esta reserva.
+Traceback (most recent call last):
+  File "c:\Users\sneider\Documents\Sistema_Software_FJ\main.py", line 33, in ejecutar_operacion
+    resultado = funcion()
+  File "c:\Users\sneider\Documents\Sistema_Software_FJ\main.py", line 273, in cancelar_reserva
+    return reserva.cancelar()
+           ~~~~~~~~~~~~~~~~^^
+  File "c:\Users\sneider\Documents\Sistema_Software_FJ\reservas.py", line 29, in cancelar
+    raise ReservaError("No se puede cancelar esta reserva.")
+excepciones.ReservaError: No se puede cancelar esta reserva.
+2026-11-20 21:46:04,909 - WARNING - OPERACION_V2|Cancelar reserva|NO_COMPLETADA
+2026-11-20 21:46:19,691 - ERROR - Error inesperado.
+Traceback (most recent call last):
+  File "c:\Users\sneider\Documents\Sistema_Software_FJ\main.py", line 328, in <module>
+    menu_principal()
+    ~~~~~~~~~~~~~~^^
+  File "c:\Users\sneider\Documents\Sistema_Software_FJ\main.py", line 297, in menu_principal
+    opcion = input("Seleccione una opción: ")
+             ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+EOFError: EOF when reading a line
+2026-11-20 21:46:20,001 - INFO - Fin de la ejecución.
